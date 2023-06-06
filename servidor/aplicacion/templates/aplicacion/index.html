@@ -1,0 +1,239 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="{% static 'aplicacion/css/bienv.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Bienvenido</title>
+</head>
+
+<body style="background-color: rgb(13, 202, 240);">
+    <header>
+        <nav class="navbar navbar-expand-sm"
+            style="margin-left: 7%; margin-right: 7%; background-color: rgb(217, 248, 250); border-radius: 20px;">
+            <div class="col-sm-3 cent"><img class="icon" src="{% static 'aplicacion/img/icono_balansa.jpg' %}" alt="icono_abogados"></div>
+            <div class="col-sm-6 cent">
+                <h1>Abogados Lex</h1>
+            </div>
+            <div class="col-sm-3 cent">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="container-fluid cent">
+                        <!-- Links -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                              <a style="margin-right: 10px;" href="{% url 'iniciosesion' %}" class="text-decoration-none text-info fw-semibold">Iniciar sesión</a>
+                            </li>
+                            <li class="nav-item">
+                              <a style="margin-right: 10px;" href="{% url 'crearcuenta' %}" class="text-decoration-none text-info fw-semibold">Contactanos</a>
+                            </li>
+                            <li class="nav-item">
+                              <a style="margin-right: 10px;" href="{% url 'crearcuenta' %}" class="text-decoration-none text-info fw-semibold">Nosotros</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main style="margin-top: 4%;">
+        <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner carou_img">
+                <div class="carousel-item active">
+                    <img src="img/img_carousel1.jpg" class="d-block w-100 " alt="img1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/img_carousel2.jpg" class="d-block w-100" alt="img2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/img_carousel3.jpg" class="d-block w-100" alt="img3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExamplControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div> -->
+        <!-- Primer espacio bienvenida -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2 cent"></div>
+                <div class="col-sm-6 cent">
+                    <div>
+                        <h1 style="font-family:Arial, Helvetica, sans-serif">Abogados Lex</h1>
+                        <br>
+                        <h2>Cotiza con nosotros tu caso y obten la primera consulta gratis!!</h4>
+                            <br>
+                            <p style="font-size: 23px;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                Somos 3 abogados especialistas en diferentes ambitos (civiles, inmoviliarias, salud,
+                                penciones, etc),
+                                gracias a nuestro conocimiento podemos ayudar a cualquiera que necesite una asistencia
+                                legal.
+                            </p>
+                            <p style="font-size: 24px;font-family:Georgia, 'Times New Roman', Times, serif">
+                                Contactenos y responderemos lo mas rápido posible.
+                            </p>
+                    </div>
+                </div>
+                <div class="col-sm-3 cent">
+                    <div><!--  -->
+                        <form class="form">
+                            <div class="title">Contactenos </div>
+                            <p>Responderemos lo más rápido posible</p>
+                            <div>
+                                <p>Email:</p>
+                                <input type="text" placeholder="Ingresa tu email" class="input">
+                            </div>
+                            <div>
+                                <p>Descripción:</p>
+                                <textarea placeholder="Ingresa tu descripción"></textarea>
+                            </div>
+                            <button>Enviar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-2 cent"></div>
+            </div>
+        </div>
+        <div style="background-color: rgb(194, 194, 194); margin-top: 2%; padding-top:2%; padding-bottom:2%;">
+            <!-- segundo espacio -->
+            <!-- bloque de 3 con informacion-->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8">
+                        <!-- bloque de 1 con informacion-->
+                        <div class="baccone">
+                            <div class="transbox">
+                                <h1>Equipo altamente calificado</h1>
+                                <p>
+                                    Abogados especializados en materia Tributaria con permanente actualización en las
+                                    reformas
+                                    tributarias,
+                                    y circulares y resoluciones del SII.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        <div class="container-fluid" style="margin-top: 10px;">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <!-- bloque de 1 con informacion-->
+                    <div class="bacctwo">
+                        <div class="transbox">
+                            <h1>Experiencia a su servicio</h1>
+                            <p>
+                                Equipo Jurídico con años de experiencia en Asesoría y Litigación Tributaria,
+                                ante el TTA, TGR y Juzgados Civiles y Juzgados de Garantía.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" style="margin-top: 10px;">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <!-- bloque de 1 con informacion-->
+                    <div class="baccthree">
+                        <div class="transbox">
+                            <h1>Soluciones legales eficaces</h1>
+                            <p>
+                                Evaluamos su situación para buscar las mejores soluciones Jurídicas a cada situación,
+                                problema, fiscalización o deuda.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- bloque de 2 con informacion-->
+        <!-- quienes somos-->
+        <div style=" background-color:rgb(194,194,194);">
+            <div class="contenedor" >
+                <img class="image"src="{% static 'aplicacion/img/equipo.jpg' %}" width="400px">
+                <div class="txt">
+                    <br>
+                    <h4>QUIENES SOMOS</h4>
+                    <br>
+                    <p style="font-family:'Courier New', Courier, monospace; text-align: left; padding-right: 100px; font-size: 16px;"><b>
+                        Somos un Estudio Jurídico especializado en el área Tributaria,
+                        con profesionales con años de experiencia en asesoría y litigación tributaria.
+                        Nuestros servicios están principalmente orientados a las Pymes y Microempresas,
+                        en materias de asesoría y de defensa tributaria ante el SII y ante cobros de Tesorería,
+                        por deudas de impuestos.
+                    </b></p>
+                </div>
+            </div>
+        </div>
+        <!--cartas con botones-->
+        <div class="title-cards">
+            <h2>Servicios que Ofrecemos</h2>
+        </div>
+        <div class="container-card">
+            <div class="card">
+                <figure>
+                    <img
+                    src="{% static 'aplicacion/img/images (1).jpg' %}">
+                </figure>
+                <div class="contenido-card">
+                    <h3>Asesoria en divorcios</h3>
+                    <p>Podemos crear la identidad corporativa de tu empresa. Diseño , Maquetación de folletos,
+                        Catálogos, Papelería y mucho más.</p>
+                    <a href="#">Leer Màs</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="{% static 'aplicacion/img/images (1).jpg' %}">
+                </figure>
+                <div class="contenido-card">
+                    <h3>Regulaciones legales para PYMES</h3>
+                    <p>Nosotros creamos y optimizamos tus perfiles en las Redes Sociales. Importantes para que tu
+                        presencia online sea completa.</p>
+                    <a href="#">Leer Màs</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img
+                        src="https://image.freepik.com/foto-gratis/desarrollo-programadores-desarrollo-tecnologias-diseno-codificacion-sitios-web_18497-1090.jpg">
+                </figure>
+                <div class="contenido-card">
+                    <h3>Algo random</h3>
+                    <p>Creamos tu página web utilizando las últimas tecnologías disponibles. Una Web adaptativa a tu
+                        móvil o Tablet y con un gestor de contenido fácil.</p>
+                    <a href="#">Leer Màs</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
