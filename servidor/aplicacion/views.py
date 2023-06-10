@@ -80,3 +80,8 @@ def solicitudes(request):
         return redirect(to="solicitudes")
         
     return render(request,'aplicacion/Solicitudes.html',contexto)
+
+def PAGINAGABY(request):
+    
+    
+    return render(request,'aplicacion/PAGINAGABY.html')
