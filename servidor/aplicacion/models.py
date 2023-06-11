@@ -36,6 +36,7 @@ class Abogado(models.Model):
 
 class Presupuesto(models.Model):
     id=models.AutoField(primary_key=True)
+    Cliente=models.ForeignKey(Cliente,on_delete=models.PROTECT,null=False)
     Abogado=models.ForeignKey(Abogado,on_delete=models.PROTECT,null=False) 
     titulo_causa=models.CharField(max_length=50,null=False)
     horarios=models.IntegerField(null=False)

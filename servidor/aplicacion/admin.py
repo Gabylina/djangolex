@@ -25,7 +25,7 @@ class admAbogado(admin.ModelAdmin):
         model=Abogado
     
 class admPresupuest(admin.ModelAdmin):
-    list_display= ["id","Abogado","titulo_causa","horarios","tramites","total"]
+    list_display= ["id","Abogado","Cliente","titulo_causa","horarios","tramites","total"]
     list_editable= ["titulo_causa","horarios","tramites","total"]
     
     class meta:
