@@ -26,6 +26,7 @@ class Solicitud(models.Model):
     titulo=models.CharField(max_length=50,null=False)
     tipo=models.CharField(choices=SOL,max_length=100,null=False)
     descripcion=models.CharField(max_length=500,null=False)
+    ##Falta agreagr al cliente aca
 
 class Abogado(models.Model):
     rut=models.CharField(max_length=12,primary_key=True)
@@ -41,6 +42,7 @@ class Presupuesto(models.Model):
     horarios=models.IntegerField(null=False)
     tramites=models.IntegerField(null=False)
     total=models.IntegerField(null=False)
+    ##Lo mismo aca faltaria agragar al cliente como foranea asi que eso no es pega mia
 
 class Causa(models.Model):
     Abogado=models.ForeignKey(Abogado,on_delete=models.PROTECT,null=False) 

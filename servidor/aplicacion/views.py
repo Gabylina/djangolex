@@ -81,7 +81,19 @@ def solicitudes(request):
         
     return render(request,'aplicacion/Solicitudes.html',contexto)
 
-def PAGINAGABY(request):
+def solicitudes_admin(request):
     
+    solis=Solicitud.objects.all()
     
-    return render(request,'aplicacion/PAGINAGABY.html')
+    form=formSolicitud(request.POST or None)
+    
+    contexto={
+        "form":form,
+    }
+    
+    if form.is_valid():
+        form_aceptado=form.save(commit=False)
+        form_aceptado.save()
+        return redirect(to="Admin/solicitudes")
+        
+    return render(request,'Admin/solicitudes.html',contexto)##aplicacion/Admin/solicitudes.html
