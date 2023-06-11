@@ -1,0 +1,15 @@
+{% extends 'aplicacion/tec_juridico/base_tec_juri.html' %}
+{% load static %}
+
+{% block contenido %}
+<div class="pill-nav">
+    <a  href="{% url 'indextecjuri' %}">Inicio</a>
+    <a class="active" href="{% url 'solicitudestecjuri' %}">Solicitudes</a>
+    <a href="{% url 'presupuestostecjuri' %}">Presupuestos</a>
+    <a href="#">otro</a>
+</div>
+
+<h1>Aquí va el contenido de solicitudes</h1>
+
+
+{% endblock  %}
