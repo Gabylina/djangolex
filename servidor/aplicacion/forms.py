@@ -22,3 +22,9 @@ class formModiCLi(forms.ModelForm):
         model = Cliente
         fields = ["nombre","apellido","direccion","correo","telefono","contraseña"]
         
+
+class formSolicitud_Tec(forms.ModelForm):
+    
+    class Meta:
+        model = Solicitud
+        fields =  ["Cliente","titulo","tipo","descripcion"]
