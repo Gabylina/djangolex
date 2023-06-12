@@ -1,0 +1,42 @@
+{% extends 'aplicacion/tec_juridico/base_tec_juri.html' %}
+{% load static %}
+
+{% block contenido %}
+<div class="pill-nav">
+    <a href="{% url 'indextecjuri' %}">Inicio</a>
+    <a class="active" href="{% url 'solicitudestecjuri' %}">Solicitudes</a>
+    <a href="{% url 'presupuestostecjuri' %}">Presupuestos</a>
+    <a href="#">otro</a>
+</div>
+
+<h1>Aquí va el contenido de solicitudes</h1>
+<div class="container tab-pane fade"><br>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-bordered text-center table-info">
+                    <thead>
+                        <tr>
+                            <th>Clíente</th>
+                            <th>Título</th>
+                            <th>Descripción</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for sol in solicitudes %}
+                        <tr>
+                            <td>{{sol.Cliente}}</td>
+                            <td>{{sol.titulo}}</td>
+                            <td>{{sol.descripcion}}</td>
+                            <td>{{sol.tipo}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
