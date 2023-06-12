@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import index,iniciosesion,crearcuenta,solicitudes,PAGINAGABY,solicitudestecjuri,indextecjuri, presupuestostecjuri
+from .views import index,iniciosesion,crearcuenta,solicitudes,PAGINAGABY,solicitudestecjuri,indextecjuri, presupuestostecjuri,pago
 
 
 
