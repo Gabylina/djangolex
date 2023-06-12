@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import index,iniciosesion,crearcuenta,solicitudes
+from .views import index,iniciosesion,crearcuenta,solicitudes,PAGINAGABY,solicitudestecjuri,indextecjuri, presupuestostecjuri
 
 
 
@@ -9,4 +9,8 @@ urlpatterns=[
     path('iniciosesion',iniciosesion,name="iniciosesion"),
     path('crearcuenta',crearcuenta,name="crearcuenta"),
     path('solicitudes',solicitudes,name="solicitudes"),
+    path('PAGINAGABY',PAGINAGABY,name="PAGINAGABY"),
+    path('solicitudestecjuri',solicitudestecjuri,name="solicitudestecjuri"),
+    path('indextecjuri',indextecjuri,name="indextecjuri"),
+    path('presupuestostecjuri',presupuestostecjuri,name="presupuestostecjuri"),
 ]

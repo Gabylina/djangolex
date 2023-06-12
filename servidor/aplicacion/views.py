@@ -80,3 +80,19 @@ def solicitudes(request):
         return redirect(to="solicitudes")
         
     return render(request,'aplicacion/Solicitudes.html',contexto)
+
+def PAGINAGABY(request):
+    
+    return render(request,'aplicacion/PAGINAGABY.html')
+
+def solicitudestecjuri(request):
+    
+    return render(request,'aplicacion/Tec_Juridico/Solicitudes_tec_juri.html')
+
+def indextecjuri(request):
+        
+    return render(request,'aplicacion/Tec_Juridico/index_tec_juri.html')
+
+def presupuestostecjuri(request):
+        
+    return render(request,'aplicacion/Tec_Juridico/presupuestos_tec_juri.html')
