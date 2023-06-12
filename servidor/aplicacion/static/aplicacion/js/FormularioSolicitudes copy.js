@@ -140,7 +140,7 @@ function pagar_presupuesto() {
         title: "Estamos redireccionando al medio de pago", 
         icon: "info", 
     })
-    setTimeout(window.location.href = "pago",5000)
+    setTimeout((window.location.href = "pago"),5000)
     .then(presupuestoPagado => { 
         if (presupuestoPagado) { 
             swal({ 
