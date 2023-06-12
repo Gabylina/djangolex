@@ -13,4 +13,5 @@ urlpatterns=[
     path('solicitudestecjuri',solicitudestecjuri,name="solicitudestecjuri"),
     path('indextecjuri',indextecjuri,name="indextecjuri"),
     path('presupuestostecjuri',presupuestostecjuri,name="presupuestostecjuri"),
+    path('pago',pago,name="pago"),
 ]

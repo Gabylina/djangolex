@@ -36,6 +36,10 @@ def crearcuenta(request):
     return render(request,'aplicacion/CrearCuenta.html',contexto)
 
 
+def pago(request):# para ir a pestaña de pago
+    
+    return render(request,'aplicacion/pago.html')
+
 
 def solicitudes(request):
     people=Cliente.objects.all()
