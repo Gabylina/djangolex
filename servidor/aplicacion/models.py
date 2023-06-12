@@ -23,6 +23,7 @@ class Cliente(models.Model):
 
 class Solicitud(models.Model):
     id=models.AutoField(primary_key=True)
+    Cliente=models.ForeignKey(Cliente,on_delete=models.PROTECT,null=False) 
     titulo=models.CharField(max_length=50,null=False)
     tipo=models.CharField(choices=SOL,max_length=100,null=False)
     descripcion=models.CharField(max_length=500,null=False)
