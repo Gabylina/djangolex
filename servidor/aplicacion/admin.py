@@ -11,7 +11,7 @@ class admCliente(admin.ModelAdmin):
         model=Cliente
 
 class admSolicitud(admin.ModelAdmin):
-    list_display=["id","titulo","tipo","descripcion"]
+    list_display=["id","Cliente","titulo","tipo","descripcion"]
     list_editable=[]
     
     class meta:

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Cliente, Solicitud, Presupuesto, Causa
-from .forms import formCrearCliente, formSolicitud,formModiCLi, formPresuTec
+from .forms import formCrearCliente, formSolicitud,formModiCLi,formSolicitud_Tec
 # Create your views here.
 
 
@@ -47,6 +47,7 @@ def solicitudes(request):
     pres=Presupuesto.objects.all()
     causa=Causa.objects.all()
     
+    
     form=formSolicitud(request.POST or None)
     
     Cli=get_object_or_404(Cliente,rut='20.994.291-7')
@@ -91,7 +92,17 @@ def PAGINAGABY(request):
 
 def solicitudestecjuri(request):
     
-    return render(request,'aplicacion/Tec_Juridico/Solicitudes_tec_juri.html')
+    solic=Solicitud.objects.all()
+    
+    form=formSolicitud_Tec(request.POST or None)
+    
+    contexto={
+        "form":form,
+        "solicitudes":solic,
+    }
+        
+    return render(request,'aplicacion/Tec_Juridico/Solicitudes_tec_juri.html',contexto)
+
 
 def indextecjuri(request):
         

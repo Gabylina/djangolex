@@ -26,3 +26,9 @@ class formPresuTec(forms.ModelForm):
     class Meta:
         model = Presupuesto
         fields = ["Cliente","Abogado","titulo_causa","horarios","tramites","total"]
+
+class formSolicitud_Tec(forms.ModelForm):
+    
+    class Meta:
+        model = Solicitud
+        fields =  ["Cliente","titulo","tipo","descripcion"]
