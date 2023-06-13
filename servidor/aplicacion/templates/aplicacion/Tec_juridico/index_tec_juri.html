@@ -3,6 +3,7 @@
 
 {% block contenido %}
 
+
 <div class="pill-nav">
     <a class="active" href="{% url 'indextecjuri' %}">Inicio</a>
     <a href="{% url 'solicitudestecjuri' %}">Solicitudes</a>
@@ -11,7 +12,30 @@
 </div>
 
 
-<h1>Aquí va el contenido de indice</h1>
+    <nav class="navbar navbar-expand-sm"
+        style="margin-left: 38%; margin-right: 22%; background-color: rgb(217, 248, 250); border-radius: 70px;">
+        <div class="col-sm-2 "><img class="icon" src="{% static 'aplicacion/img/icono_balansa.jpg' %}" alt="icono_abogados"></div>
+        <div class="col-sm-3 cent"></div>
+            <h1>Abogados Lex</h1>
+        </div>
+    </nav>
+    
+
+</div>
+
+<br>
+<h1 align="center">Te damos la bienvenida y agradecemos que haya depositado su confianza en nuestra organización y en nuestros profesionales!!</h1>
+
+<div align="right"><img right width="380" height="350" src="{% static 'aplicacion/img/tecnico1.jpg' %}" alt="tecnico"> </div>
+<h3 align="center">Estudia, El derecho se transforma constantemente. Si no sigues sus pasos, serás cada día un poco menos abogado.</h3>
+
+<div align="left"><img right width="360" height="340" src="{% static 'aplicacion/img/tecnico2.jpg' %}" alt="tecnico2">
+<h3 align="left">¡Un abogado sin libros sería como un trabajador sin herramientas!</h3>
+</div>
+
+
+
+
 
 
 {% endblock  %}
