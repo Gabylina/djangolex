@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import index,iniciosesion,crearcuenta,solicitudes,PAGINAGABY,solicitudestecjuri,indextecjuri, presupuestostecjuri,pago
+from .views import index,iniciosesion,crearcuenta,solicitudes,PAGINAGABY,solicitudestecjuri,indextecjuri, presupuestostecjuri,pago,iniciosesion_tec_juri
 
 
 
@@ -14,4 +14,5 @@ urlpatterns=[
     path('indextecjuri',indextecjuri,name="indextecjuri"),
     path('presupuestostecjuri',presupuestostecjuri,name="presupuestostecjuri"),
     path('pago',pago,name="pago"),
+    path('iniciosesion_tec_juri',iniciosesion_tec_juri,name="iniciosesion_tec_juri"),
 ]

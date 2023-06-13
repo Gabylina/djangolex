@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Cliente, Solicitud, Presupuesto, Causa
-from .forms import formCrearCliente, formSolicitud,formModiCLi,formSolicitud_Tec
+from .forms import formCrearCliente, formSolicitud,formModiCLi,formSolicitud_Tec, formPresuTec
 # Create your views here.
 
 
@@ -11,9 +11,6 @@ def index(request):
 
 
 def iniciosesion(request):
-    
-    
-    
     
     return render(request,'aplicacion/Inicio_sesion.html')
 
@@ -98,7 +95,7 @@ def solicitudestecjuri(request):
     
     contexto={
         "form":form,
-        "solicitudes":solic,
+        "solicitudes":solicitudes,
     }
         
     return render(request,'aplicacion/Tec_Juridico/Solicitudes_tec_juri.html',contexto)
@@ -116,3 +113,9 @@ def presupuestostecjuri(request):
         form = formPresuTec(request.POST)
     
     return render(request,'aplicacion/Tec_Juridico/presupuestos_tec_juri.html', { 'form' : form })
+
+
+
+def iniciosesion_tec_juri(request):
+    
+    return render(request,'aplicacion/Tec_Juridico/inicio_sesion_tec_juri.html')

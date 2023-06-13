@@ -20,3 +20,16 @@ function login(){
     }
 
 }
+
+function login_tec_juri(){
+    var user,contra
+    user=document.getElementById("username").value;
+    contra=document.getElementById("password").value;
+
+    if(user=="tecnico" && contra=="123"){
+        location.href ="http://127.0.0.1:8000/indextecjuri";
+    }else{
+        swal("Usuario o contraseña incorrectos","","warning");
+    }
+
+}
