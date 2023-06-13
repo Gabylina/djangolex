@@ -201,7 +201,7 @@
                     <div class="text-white5 fw-semibold">
                       <a href="#" onclick="d()" class="text-decoration-none text-dark fst-italic btn bg-light">
                         Descargar presupuesto</a>
-                      <a id="boton" href="#" onclick="pagar_presupuesto()" class="text-decoration-none text-dark fst-italic btn bg-light">
+                      <a id="boton" href="{% url 'pago' pres.id%}" {% comment %} onclick="pagar_presupuesto()" {% endcomment %} class="text-decoration-none text-dark fst-italic btn bg-light">
                         Pagar</a>
                     </div>    
                   </td>

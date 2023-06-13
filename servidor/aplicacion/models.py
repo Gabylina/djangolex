@@ -43,8 +43,18 @@ class Presupuesto(models.Model):
     horarios=models.IntegerField(null=False)
     tramites=models.IntegerField(null=False)
     total=models.IntegerField(null=False)
+    
+    def __str__(self): 
+        return self.id
 
 class Causa(models.Model):
     Abogado=models.ForeignKey(Abogado,on_delete=models.PROTECT,null=False) 
     titulo=models.CharField(max_length=50,null=False)
+
+class Orden(models.Model):
+    presupuesto = models.ForeignKey(Presupuesto,max_length=1000,null=True , blank=True, on_delete=models.PROTECT)
+    creado = models.DateTimeField(auto_now_add=True)
     
+    def __str__(self):
+        return self.presupuesto.id
+        

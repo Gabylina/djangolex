@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Cliente, Solicitud, Presupuesto, Causa
-from .forms import formCrearCliente, formSolicitud,formModiCLi,formSolicitud_Tec
+from .forms import formCrearCliente, formSolicitud,formModiCLi,formSolicitud_Tec,formPresuTec
 # Create your views here.
 
 
@@ -36,9 +36,10 @@ def crearcuenta(request):
     return render(request,'aplicacion/CrearCuenta.html',contexto)
 
 
-def pago(request):# para ir a pestaña de pago
-    
-    return render(request,'aplicacion/pago.html')
+def pago(request,pk):# para ir a pestaña de pago
+    presupuesto = Presupuesto.objects.get(id=pk)
+    contexto = {'presupuesto':presupuesto}
+    return render(request,'aplicacion/pago.html',contexto)
 
 
 def solicitudes(request):
