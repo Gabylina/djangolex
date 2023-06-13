@@ -52,7 +52,7 @@ class Causa(models.Model):
     titulo=models.CharField(max_length=50,null=False)
 
 class Orden(models.Model):
-    presupuesto = models.ForeignKey(Presupuesto,max_length=1000,null=True , blank=True, on_delete=models.PROTECT)
+    presupuesto = models.ForeignKey(Presupuesto,max_length=100000, on_delete=models.PROTECT)
     creado = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):

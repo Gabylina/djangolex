@@ -18,7 +18,7 @@
     <h2></h2>
     <div class="row" style="display: flex; justify-content: center; align-items: center;">
       <div class="col-6">
-        <div>{{pres.id}}</div>
+        <div id="presupuestos">{{presupuesto.total}}</div>
         <div id="paypal-button-container"></div>
       </div>
     </div>
@@ -30,7 +30,7 @@
   <script>
     // Render the PayPal button into #paypal-button-container
 
-    const total = '{{pres.total}}'
+    const total = {{presupuesto.total}}
 
     paypal.Buttons({
 
