@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Cliente, Solicitud, Presupuesto, Causa
-from .forms import formCrearCliente, formSolicitud,formModiCLi,formSolicitud_Tec
+from .forms import formCrearCliente, formSolicitud,formModiCLi,formSolicitud_Tec, formPresuTec
 # Create your views here.
 
 
@@ -114,5 +114,8 @@ def presupuestostecjuri(request):
 
     if request.method == "POST":
         form = formPresuTec(request.POST)
+        if form.is_valid():
+            form.save()
+            
     
     return render(request,'aplicacion/Tec_Juridico/presupuestos_tec_juri.html', { 'form' : form })
